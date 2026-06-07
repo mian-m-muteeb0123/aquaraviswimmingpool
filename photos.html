@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photos - Aqua Ravi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+<div class="gallery-title">
+  <h1>Photos</h1>
+</div>
+
+<section class="gallery">
+  <img src="images/pool1.jpg" alt="Photo 1">
+  <img src="images/pool2.jpg" alt="Photo 2">
+  <img src="images/pool3.jpg" alt="Photo 3">
+  <img src="images/pool4.jpg" alt="Photo 4">
+  <img src="images/pool5.jpg" alt="Photo 5">
+  <img src="images/pool6.jpg" alt="Photo 6">
+</section>
+
+
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+
+
+
+
+
+<!-- Lightbox Script (same as main index page) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.gallery img');
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-image">
+    `;
+    document.body.appendChild(modal);
+
+    const modalImg = document.getElementById("modal-image");
+    const closeBtn = document.querySelector(".close");
+
+    images.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      });
+    });
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    modal.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

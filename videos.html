@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Videos - Aqua Ravi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    /* Match video style to image gallery */
+    .video-thumb {
+      width: 280px;
+      height: auto;
+      margin: 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .video-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+    }
+
+    .modal video {
+      max-width: 90%;
+      max-height: 90vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery-title">
+  <h1>Videos</h1>
+</div>
+
+<section class="gallery">
+  <video src="videos/video1.mp4" class="video-thumb" muted></video>
+  <video src="videos/video2.mp4" class="video-thumb" muted></video>
+  <video src="videos/video3.mp4" class="video-thumb" muted></video>
+  <video src="videos/video4.mp4" class="video-thumb" muted></video>
+  <video src="videos/video5.mp4" class="video-thumb" muted></video>
+  <video src="videos/video6.mp4" class="video-thumb" muted></video>
+</section>
+
+
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+
+
+
+
+
+
+<!-- Lightbox Modal for Full Video View -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('.video-thumb');
+
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <span class="close">&times;</span>
+      <video class="modal-content" id="modal-video" controls autoplay></video>
+    `;
+    document.body.appendChild(modal);
+
+    const modalVideo = document.getElementById("modal-video");
+    const closeBtn = document.querySelector(".close");
+
+    videos.forEach(vid => {
+      vid.addEventListener('click', function () {
+        modal.style.display = "block";
+        modalVideo.src = this.src;
+      });
+    });
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+
+    modal.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        modalVideo.pause();
+        modalVideo.src = "";
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

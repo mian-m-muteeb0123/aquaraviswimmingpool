@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aqua Ravi Swimming Pool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+</head>
+<body>
+
+  <!-- Start of blur container -->
+  <div id="content">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Aqua Ravi Swimming Pool" height="100">
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="photos.html">Photos</a>
+      <a href="videos.html">Videos</a>
+
+    </nav>
+    
+    
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <img src="images/pool1.jpg" alt="Pool View 1">
+      <img src="images/pool2.jpg" alt="Pool View 2">
+      <img src="images/pool3.jpg" alt="Pool View 3">
+      <img src="images/pool4.jpg" alt="Pool View 4">
+      <img src="images/pool5.jpg" alt="Pool View 5">
+    </section>
+    
+    
+      
+
+    <!-- Description Section -->
+    <section class="description">
+      <h1>Pricing</h1>
+      <p>
+        </strong>Individual Ticket = Rs.250</strong><br>
+        </strong>Booking = Rs.30,000 per 4 hours</strong>  (Negotiateable)
+      </p>
+
+      <h2>About Our Pool</h2>
+      <p>
+  🏊‍♂️ <strong>Aqua Ravi Swimming Pool – Dive into Refreshment</strong><br><br>
+
+  <strong>Aqua Ravi Swimming Pool is a modern, family-friendly aquatic facility designed to deliver the ultimate swimming experience in a clean, safe, and peaceful environment. Whether you're a professional swimmer, a fitness enthusiast, or simply seeking a refreshing escape from the summer heat, Aqua Ravi offers the perfect space for you. The pool features an Olympic-size layout with dedicated sections for beginners, children, and advanced swimmers. With professional lifeguards and trainers always on duty, along with clean changing rooms, secure lockers, and a filtered water system, your comfort and safety are our top priorities. The facility also includes a relaxing seating area, the option for night swimming accompanied by soft music, and affordable membership plans for individuals, families, and groups. Special services such as ladies-only hours, >kids' swimming lessons, and private bookings are also available. At Aqua Ravi, we are committed to both your fitness and enjoyment dive in today and feel the difference!</strong>
+
+      </p>
+      <h3>🌊 Our Vision – Marabi Group<h3>
+        <p>At Marabi Group, our mission is to bring healthy, accessible, and enjoyable swimming experiences to people across Pakistan. We believe that swimming is not just a sport, but a lifestyle that promotes health, fitness, discipline, and joy. That's why our core goal is to expand the reach of high-quality swimming pools to both urban and rural areas where such facilities are either lacking or completely unavailable.
+
+We are committed to designing and developing modern swimming pools that meet international standards for hygiene, safety, and training. Our pools are built to serve families, professional swimmers, fitness lovers, and even beginners — ensuring everyone has a place to dive, learn, and relax.
+
+Through the Aqua Ravi project and other future developments, Marabi Group aims to scatter swimming pools across regions — making them part of every community's recreational and fitness culture. Each pool under our group is supervised by qualified staff, lifeguards, and trainers to ensure a safe and welcoming environment for all.
+
+Our vision doesn't stop at construction — we also work to raise awareness about water safety, swimming education, and healthy lifestyles, especially among children and youth. By bringing swimming pools closer to people, we help build stronger, healthier communities.
+
+At Marabi Group, we're not just building pools — we're building a swimming culture. One city, one village, one neighborhood at a time. 🌊🏊‍♂️
+
+          <p>
+    </section>
+
+ <script>
+  // Lightbox functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.gallery img');
+    // Get the modal
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-image">
+    `;
+    document.body.appendChild(modal);
+
+    // Get the modal image
+    const modalImg = document.getElementById("modal-image");
+    const closeBtn = document.querySelector(".close");
+
+    // When user clicks on an image
+    images.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      });
+    });
+
+    // When user clicks on (x)
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When user clicks anywhere outside the image
+    modal.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
+

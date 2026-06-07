@@ -1,0 +1,250 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  color: black;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+}
+
+.logo img {
+  height: 250px;
+  transition: all 0.4s ease;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+  color: #333;
+  transform: scale(1.1);
+}
+
+/* Gallery Section */
+.gallery {
+  text-align: center;
+  padding: 40px 20px;
+  transition: all 0.4s ease;
+}
+
+.gallery img {
+  width: 280px;
+  height: auto;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Description Section */
+.description {
+  text-align: center;
+  padding: 40px 25px;
+  max-width: 900px;
+  margin: auto;
+  font-size: 19px;
+  line-height: 1.7;
+  transition: all 0.4s ease;
+}
+
+/* Staff Table */
+.staff-table {
+  padding: 40px 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.staff-table table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.staff-table th, .staff-table td {
+  padding: 18px;
+  border: 1px solid black;
+  color: black;
+  transition: all 0.4s ease;
+}
+
+.staff-table th {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 20px;
+}
+
+.staff-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Profile Button */
+.profile-btn {
+  background-color: #000;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.profile-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Contact Info */
+.contact-info {
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.contact-info button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.contact-info button:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 50px 25px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.profile-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+
+.profile-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox/Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  transition: all 0.4s ease;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  max-height: 90vh;
+  margin-top: 5vh;
+  animation: zoom 0.4s;
+  transition: all 0.4s ease;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)}
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Page transition effects */
+body {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hover effects for all interactive elements */
+a, button, img, .profile-btn {
+  transition: all 0.4s ease !important;
+}
+
+/* Table row hover effect */
+.staff-table tr {
+  transition: all 0.4s ease;
+}
+
+.staff-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.01);
+}
+
