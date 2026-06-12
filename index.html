@@ -1,113 +1,278 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aqua Ravi Swimming Pool</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Start of blur container -->
+  <!-- Ambient water particles background -->
+  <canvas id="waterCanvas"></canvas>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <div id="content">
 
-    <!-- Logo -->
-    <div class="logo">
-      <img src="images/logo.png" alt="Aqua Ravi Swimming Pool" height="100">
-    </div>
+    <!-- Logo / Hero Section -->
+    <header class="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="logo reveal-up">
+        <img src="images/logo.png" alt="Aqua Ravi Swimming Pool" height="100">
+      </div>
+      <div class="hero-tagline reveal-up delay-1">
+        <h1 class="hero-title">Dive Into <span class="gradient-text">Perfection</span></h1>
+        <p class="hero-sub">Where every stroke feels like freedom</p>
+        <div class="hero-actions reveal-up delay-2">
+          <a href="photos.html" class="aqua-btn aqua-btn-primary">Explore Photos</a>
+          <a href="contact.html" class="aqua-btn aqua-btn-ghost">Book Now</a>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#050D1A"/>
+        </svg>
+      </div>
+    </header>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="photos.html">Photos</a>
-      <a href="videos.html">Videos</a>
-
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <span class="nav-brand">Aqua Ravi</span>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+          <a href="photos.html" class="nav-link">Photos</a>
+          <a href="videos.html" class="nav-link">Videos</a>
+        </div>
+      </div>
     </nav>
-    
-    
+
     <!-- Gallery Section -->
-    <section class="gallery">
-      <img src="images/pool1.jpg" alt="Pool View 1">
-      <img src="images/pool2.jpg" alt="Pool View 2">
-      <img src="images/pool3.jpg" alt="Pool View 3">
-      <img src="images/pool4.jpg" alt="Pool View 4">
-      <img src="images/pool5.jpg" alt="Pool View 5">
+    <section class="gallery-section">
+      <div class="section-eyebrow reveal-up">Our Facility</div>
+      <h2 class="section-title reveal-up delay-1">A Pool <span class="gradient-text">Like No Other</span></h2>
+      <div class="gallery reveal-up delay-2">
+        <img src="images/pool1.jpg" alt="Pool View 1">
+        <img src="images/pool2.jpg" alt="Pool View 2">
+        <img src="images/pool3.jpg" alt="Pool View 3">
+        <img src="images/pool4.jpg" alt="Pool View 4">
+        <img src="images/pool5.jpg" alt="Pool View 5">
+      </div>
     </section>
-    
-    
-      
 
-    <!-- Description Section -->
-    <section class="description">
-      <h1>Pricing</h1>
-      <p>
-        </strong>Individual Ticket = Rs.300</strong><br>
-        </strong>Booking = Rs.25,000 per 4 hours</strong>  (Negotiateable)
-      </p>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+      <div class="section-eyebrow reveal-up">Transparent Rates</div>
+      <h2 class="section-title reveal-up delay-1">Simple <span class="gradient-text">Pricing</span></h2>
+      <div class="pricing-cards">
+        <div class="price-card reveal-up delay-1">
+          <div class="price-icon">🎫</div>
+          <h3>Individual Ticket</h3>
+          <div class="price-amount">Rs. 300</div>
+          <p>Drop-in access, any time</p>
+        </div>
+        <div class="price-card featured reveal-up delay-2">
+          <div class="price-badge">Most Popular</div>
+          <div class="price-icon">🏊</div>
+          <h3>Private Booking</h3>
+          <div class="price-amount">Rs. 25,000</div>
+          <p>Per 4 hours · Negotiable</p>
+        </div>
+      </div>
+    </section>
 
-      <h2>About Our Pool</h2>
-      <p>
-  🏊‍♂️ <strong>Aqua Ravi Swimming Pool – Dive into Refreshment</strong><br><br>
-
-  <strong>Aqua Ravi Swimming Pool is a modern, family-friendly aquatic facility designed to deliver the ultimate swimming experience in a clean, safe, and peaceful environment. Whether you're a professional swimmer, a fitness enthusiast, or simply seeking a refreshing escape from the summer heat, Aqua Ravi offers the perfect space for you. The pool features an Olympic-size layout with dedicated sections for beginners, children, and advanced swimmers. With professional lifeguards and trainers always on duty, along with clean changing rooms, secure lockers, and a filtered water system, your comfort and safety are our top priorities. The facility also includes a relaxing seating area, the option for night swimming accompanied by soft music, and affordable membership plans for individuals, families, and groups. Special services such as ladies-only hours, >kids' swimming lessons, and private bookings are also available. At Aqua Ravi, we are committed to both your fitness and enjoyment dive in today and feel the difference!</strong>
-
-      </p>
-      <h3>🌊 Our Vision – Marabi Group<h3>
-        <p>At Marabi Group, our mission is to bring healthy, accessible, and enjoyable swimming experiences to people across Pakistan. We believe that swimming is not just a sport, but a lifestyle that promotes health, fitness, discipline, and joy. That's why our core goal is to expand the reach of high-quality swimming pools to both urban and rural areas where such facilities are either lacking or completely unavailable.
-
-We are committed to designing and developing modern swimming pools that meet international standards for hygiene, safety, and training. Our pools are built to serve families, professional swimmers, fitness lovers, and even beginners — ensuring everyone has a place to dive, learn, and relax.
-
-Through the Aqua Ravi project and other future developments, Marabi Group aims to scatter swimming pools across regions — making them part of every community's recreational and fitness culture. Each pool under our group is supervised by qualified staff, lifeguards, and trainers to ensure a safe and welcoming environment for all.
-
-Our vision doesn't stop at construction — we also work to raise awareness about water safety, swimming education, and healthy lifestyles, especially among children and youth. By bringing swimming pools closer to people, we help build stronger, healthier communities.
-
-At Marabi Group, we're not just building pools — we're building a swimming culture. One city, one village, one neighborhood at a time. 🌊🏊‍♂️
-
+    <!-- About Pool Section -->
+    <section class="about-section">
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <div class="section-eyebrow">About Our Pool</div>
+          <h2 class="section-title">Aqua Ravi <span class="gradient-text">Swimming Pool</span></h2>
           <p>
+            A modern, family-friendly aquatic facility designed to deliver the ultimate swimming experience
+            in a clean, safe, and peaceful environment. Whether you're a professional swimmer, a fitness
+            enthusiast, or seeking a refreshing escape — Aqua Ravi is your perfect space.
+          </p>
+          <p>
+            The pool features an Olympic-size layout with dedicated sections for beginners, children, and
+            advanced swimmers. Professional lifeguards and trainers are always on duty, alongside clean
+            changing rooms, secure lockers, and a fully filtered water system.
+          </p>
+        </div>
+        <div class="features-grid reveal-right">
+          <div class="feature-chip">🌙 Night Swimming</div>
+          <div class="feature-chip">👩 Ladies-Only Hours</div>
+          <div class="feature-chip">👶 Kids' Lessons</div>
+          <div class="feature-chip">🎵 Soft Music</div>
+          <div class="feature-chip">🔒 Secure Lockers</div>
+          <div class="feature-chip">💧 Filtered Water</div>
+          <div class="feature-chip">🏅 Pro Trainers</div>
+          <div class="feature-chip">📋 Private Bookings</div>
+        </div>
+      </div>
     </section>
 
- <script>
-  // Lightbox functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.gallery img');
-    // Get the modal
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
-      <span class="close">&times;</span>
-      <img class="modal-content" id="modal-image">
-    `;
-    document.body.appendChild(modal);
+    <!-- Vision Section -->
+    <section class="vision-section">
+      <div class="vision-glow"></div>
+      <div class="section-eyebrow reveal-up">Our Vision</div>
+      <h2 class="section-title reveal-up delay-1">Marabi <span class="gradient-text">Group</span></h2>
+      <div class="vision-content reveal-up delay-2">
+        <p>
+          At Marabi Group, our mission is to bring healthy, accessible, and enjoyable swimming experiences
+          to people across Pakistan. We believe that swimming is not just a sport, but a lifestyle that
+          promotes health, fitness, discipline, and joy.
+        </p>
+        <p>
+          Through the Aqua Ravi project and future developments, Marabi Group aims to scatter world-class
+          swimming pools across regions — making them part of every community's recreational and fitness
+          culture. Our vision is to raise awareness about water safety, swimming education, and healthy
+          lifestyles, especially among children and youth.
+        </p>
+        <p class="vision-tagline">
+          <em>We're not just building pools — we're building a swimming culture. 🌊🏊‍♂️</em>
+        </p>
+      </div>
+    </section>
 
-    // Get the modal image
-    const modalImg = document.getElementById("modal-image");
-    const closeBtn = document.querySelector(".close");
+  </div><!-- end #content -->
 
-    // When user clicks on an image
-    images.forEach(img => {
-      img.addEventListener('click', function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        modalImg.alt = this.alt;
-      });
-    });
+  <!-- Lightbox Modal -->
+  <div class="modal" id="lightboxModal">
+    <span class="close" id="modalClose">&times;</span>
+    <img class="modal-content" id="modal-image">
+  </div>
 
-    // When user clicks on (x)
-    closeBtn.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When user clicks anywhere outside the image
-    modal.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
+  <script>
+    /* Aqua Ravi universal page effects
+       Works with both the new design and older pages that use .navbar a, .gallery img, or dynamically-created .modal. */
+    document.addEventListener('DOMContentLoaded', function () {
+      /* Scroll Progress Bar */
+      const progressBar = document.getElementById('scrollProgress');
+      if (progressBar) {
+        const updateProgress = () => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+          progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+        };
+        updateProgress();
+        window.addEventListener('scroll', updateProgress, { passive: true });
       }
-    }
-  });
-</script>
+
+      /* Sticky Navbar */
+      const navbar = document.getElementById('navbar') || document.querySelector('.navbar');
+      if (navbar) {
+        const updateNavbar = () => navbar.classList.toggle('scrolled', window.scrollY > 80);
+        updateNavbar();
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+      }
+
+      /* Scroll Reveal Animations */
+      const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .price-card, .feature-chip');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => observer.observe(el));
+      } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+      }
+
+      /* Lightbox: supports gallery on Home and Photos pages */
+      const images = document.querySelectorAll('.gallery img, .photos-gallery img, .photo-gallery img, .photos img');
+      if (images.length) {
+        let modal = document.getElementById('lightboxModal') || document.querySelector('.modal');
+        let modalImg = document.getElementById('modal-image') || document.querySelector('.modal-content');
+        let closeBtn = document.getElementById('modalClose') || document.querySelector('.close');
+
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.className = 'modal';
+          modal.id = 'lightboxModal';
+          modal.innerHTML = '<span class="close" id="modalClose">&times;</span><img class="modal-content" id="modal-image" alt="Opened pool view">';
+          document.body.appendChild(modal);
+          modalImg = document.getElementById('modal-image');
+          closeBtn = document.getElementById('modalClose');
+        }
+
+        const openModal = (img) => {
+          modal.classList.add('open');
+          modal.style.display = 'flex';
+          document.body.classList.add('modal-open');
+          if (modalImg) {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt || 'Aqua Ravi gallery image';
+            modalImg.style.animation = 'none';
+            void modalImg.offsetWidth;
+            modalImg.style.animation = 'modalImageIn 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards';
+          }
+        };
+
+        const closeModal = () => {
+          modal.classList.remove('open');
+          modal.style.display = 'none';
+          document.body.classList.remove('modal-open');
+        };
+
+        images.forEach(img => img.addEventListener('click', () => openModal(img)));
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+      }
+
+      /* Ambient Water Canvas */
+      const canvas = document.getElementById('waterCanvas');
+      if (canvas && canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+        let W, H;
+        const particles = [];
+
+        function resize() {
+          W = canvas.width = window.innerWidth;
+          H = canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        for (let i = 0; i < 55; i++) {
+          particles.push({
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            r: Math.random() * 2.5 + 0.5,
+            dx: (Math.random() - 0.5) * 0.35,
+            dy: (Math.random() - 0.5) * 0.35,
+            alpha: Math.random() * 0.5 + 0.1
+          });
+        }
+
+        function drawParticles() {
+          ctx.clearRect(0, 0, W, H);
+          particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0, 200, 255, ${p.alpha})`;
+            ctx.fill();
+            p.x += p.dx;
+            p.y += p.dy;
+            if (p.x < 0 || p.x > W) p.dx *= -1;
+            if (p.y < 0 || p.y > H) p.dy *= -1;
+          });
+          requestAnimationFrame(drawParticles);
+        }
+        drawParticles();
+      }
+    });
+  </script>
 
 </body>
 </html>
-
